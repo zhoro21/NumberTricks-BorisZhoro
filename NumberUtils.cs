@@ -51,7 +51,9 @@ namespace Number_Tricks
             for (int i = 2; i <= n; i++)
             {
                 if (prime[i] == true)
+                {
                     Console.Write(i + " ");
+                }
             }
         }
 
