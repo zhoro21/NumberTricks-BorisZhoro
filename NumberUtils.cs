@@ -2,10 +2,10 @@
 
 public class NumberUtils
 {
-	public NumberUtils()
-	{
+	  public NumberUtils()
+	  {
 
-	}
+	  }
     public static double BabylonRoot(double number)
     {
         double a = number;
@@ -18,5 +18,5 @@ public class NumberUtils
             b = number / a;
         }
         return a;
-    }
+    {
 }
