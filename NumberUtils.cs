@@ -1,6 +1,5 @@
 ﻿using System;
-
-public class NumberUtils
+namespace Number_Tricks
 {
 	  public NumberUtils()
 	  {
@@ -13,10 +12,22 @@ public class NumberUtils
         double e = 0.000001;
 
         while (a - b > e)
-        {
+        { 
             a = (a + b) / 2;
             b = number / a;
         }
         return a;
     {
+    public static double FastPow(double a, int n)
+    {
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            double halfPowered = FastPow(a, n / 2);
+            double subTotal = halfPowered * halfPowered;
+            return n % 2 == 0 ? subTotal : subTotal * a;
+        }
+    }
 }
