@@ -22,7 +22,7 @@ namespace Number_Tricks
         }
         public static double FastPow(double a, int n)
         {
-            {
+            
                 if (n == 0)
                 {
                     return 1;
@@ -30,7 +30,26 @@ namespace Number_Tricks
                 double halfPowered = FastPow(a, n / 2);
                 double subTotal = halfPowered * halfPowered;
                 return n % 2 == 0 ? subTotal : subTotal * a;
+           
+        }
+        public static List<int> Divisors(int num)
+        {
+            List<int> div = new List<int>();
+
+            for (int i = 1; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    div.Add(i);
+                    if (i != num / i)
+                    {
+                        div.Add(num / i);
+                    }
+                }
             }
+
+            div.Sort();
+            return div;
         }
     }
 
