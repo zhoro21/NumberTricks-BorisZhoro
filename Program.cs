@@ -9,9 +9,9 @@ namespace Number_Tricks
             //Console.WriteLine(NumberUtils.FastPow(2, 11));
             
 
-            List<int> div = NumberUtils.Divisors(num);
-            int num = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Divisors of {num}: {string.Join(", ", div)}")
+            int num = Convert.ToInt32(Console.ReadLine());
+            List<int> divisors = NumberUtils.Divisors(num);
+            Console.WriteLine($"Divisors of {num}: {string.Join(", ", divisors)}");
             Console.ReadKey();
         }
     }
