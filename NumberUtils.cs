@@ -78,6 +78,28 @@ namespace Number_Tricks
             div.Sort();
             return div;
         }
+        public static void DrawSin(double phi,double d)
+        {
+            double scaleY = 5;
+            int boundY = 10;
+            double scaleX = 50/360;
+            int boundX = (int)(d * scaleX);
+            for (int y = boundY; y >= -boundY; y--)
+            {
+                for (int x = 0; x <= boundX; x++)
+                {
+                    double currentY = scaleY * Math.Sin(Deg2Rad(phi + x /scaleX));
+                    bool IsUnderSine = y < currentY;
+
+                    Console.Write(IsUnderSine ? "**" : "  ");
+                }
+                Console.WriteLine();
+            }
+        }
+        public static double Deg2Rad(double deg)
+        {
+            return deg/180 + Math.PI;
+        }
 
 
     }
