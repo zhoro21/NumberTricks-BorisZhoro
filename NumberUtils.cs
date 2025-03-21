@@ -79,6 +79,20 @@ namespace Number_Tricks
             return div;
         }
 
+        public static void DrawCircle(double r)
+        {
+            int bound = (int)Math.Ceiling(r);
+            for (int x = bound-1; x >= -bound; x--)
+            {
+                for (int y = -bound; y < bound; y++)
+                {
+                    bool isInCircle = x * x + y * y < r * r;
+                    Console.Write(isInCircle ? "#" : " ");
+                }
+                Console.WriteLine();
+            }   
+        }
+
 
     }
 
